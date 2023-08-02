@@ -38,6 +38,7 @@ public class ProductDaoImpl implements ProductDao {
 		paramMap.put("price", product.getPrice());
 		paramMap.put("quantity", product.getQuantity());
 		jdbcTemplate.update(ProductQueries.ADD_PRODUCT, new MapSqlParameterSource(paramMap), keyHolder);
+		log.info("Product created:{} with id:{}", product.toString(), keyHolder.getKey().intValue());
 		return keyHolder.getKey().intValue();
 	}
 

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ecom.product.dto.ProductDto;
+import com.ecom.product.exception.ProductNotFoundException;
 import com.ecom.product.model.Product;
 import com.ecom.product.service.ProductService;
 
@@ -24,7 +25,8 @@ public class ProductController {
 
 	@GetMapping("/")
 	public ResponseEntity<List<Product>> getAllProducts() {
-		return new ResponseEntity<>(productService.getAllProducts(), HttpStatus.OK);
+		throw new ProductNotFoundException("Not found");
+//		return new ResponseEntity<>(productService.getAllProducts(), HttpStatus.OK);
 	}
 
 	@PostMapping("/add")
