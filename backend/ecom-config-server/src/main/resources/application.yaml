@@ -1,19 +1,17 @@
-server:
-  port: 8765
 spring:
-  application:
-    name: CONFIG-SERVER
   cloud:
     config:
       server:
         git:
           uri: https://github.com/vaibhav-jadhav0512/ecommerce.git
+          username: vaibhav-jadhav0512
+          password: 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
           clone-on-start: true
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    service-url:
-      defaultZone: ${EUREKA_SERVER_ADDRESS:http://localhost:8761/eureka}
+          search-paths: config/*
+#  profiles:
+#    active:
+#    - dev
+#          #search-paths: '{application}'
+#          #search-paths: 'config/{application}'
+
+  
