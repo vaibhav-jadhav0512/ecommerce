@@ -4,7 +4,6 @@ import java.util.Calendar;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
@@ -17,7 +16,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 import lombok.extern.log4j.Log4j2;
 
 @ControllerAdvice
-@PropertySource("classpath:errormap.properties")
+//@PropertySource("classpath:errormap.properties")
 @Log4j2
 public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 	@Autowired

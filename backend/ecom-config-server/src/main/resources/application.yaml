@@ -1,17 +1,15 @@
 spring:
+  application:
+    name: ecom-config-server
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/vaibhav-jadhav0512/ecommerce.git
-          username: vaibhav-jadhav0512
-          password: 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
+          uri: https://github.com/vaibhav-jadhav0512/ecommerce
           clone-on-start: true
-          search-paths: config/*
-#  profiles:
-#    active:
-#    - dev
-#          #search-paths: '{application}'
-#          #search-paths: 'config/{application}'
+          search-paths: 'config/*'
+          default-label: main
+server:
+  port: 8765
 
   
