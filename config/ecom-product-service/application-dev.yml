@@ -7,7 +7,7 @@ spring:
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
   application:
-    name: PRODUCT-SERVICE
+    name: ECOM-PRODUCT-SERVICE
 eureka:
   instance:
     prefer-ip-address: true
