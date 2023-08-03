@@ -7,7 +7,7 @@ spring:
         git:
           uri: https://github.com/vaibhav-jadhav0512/ecommerce
           clone-on-start: true
-          search-paths: 'config/*'
+          search-paths: 'config/{application}'
           default-label: main
 server:
   port: 8765
