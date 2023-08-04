@@ -15,7 +15,8 @@ public class WebSecurityConfig {
 
 	@Bean
 	public SecurityFilterChain securityWebFilterChain(HttpSecurity http) throws Exception {
-		http.authorizeRequests(authorizeRequest -> authorizeRequest.anyRequest().authenticated())
+		http.authorizeRequests(authorizeRequest -> authorizeRequest.requestMatchers("/swagger-ui/**", "/v3/api-docs/**")
+				.permitAll().anyRequest().authenticated())
 				.oauth2ResourceServer(OAuth2ResourceServerConfigurer::jwt);
 		return http.build();
 	}
