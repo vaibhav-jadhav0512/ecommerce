@@ -1,6 +1,22 @@
 server:
   port: 9001
 spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://dev-25813495.okta.com/oauth2/default
+      client:
+        registration:
+          internal-client:
+            provider: okta
+            authorization-grant-type: client_credentials
+            scope: internal
+            client-id: 0oaao9o5zyIWHzLKy5d7
+            client-secret: RYdeUmHnTeHROrzOuUMPYSx-QDHLoR3vAqdADj3qvYi-GoI-n_ZHO9rCSqrnGXXe
+        provider:
+          okta:
+            issuer-uri: https://dev-25813495.okta.com/oauth2/default
   datasource:
     url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/orders
     username: root
