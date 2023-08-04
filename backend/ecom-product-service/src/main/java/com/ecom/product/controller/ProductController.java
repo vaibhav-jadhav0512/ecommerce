@@ -43,4 +43,9 @@ public class ProductController {
 		return orderServiceProxy.test();
 	}
 
+	@GetMapping("/tests")
+	public String testfeign() {
+		return "Product";
+	}
+
 }
