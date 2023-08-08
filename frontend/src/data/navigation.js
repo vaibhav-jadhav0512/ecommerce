@@ -1,109 +1,122 @@
 export const navigation = {
   categories: [
     {
-      id: "coldpressedoil",
-      name: "Cold Pressed Oil",
+      id: "women",
+      name: "Women",
       featured: [
         {
           name: "New Arrivals",
           href: "#",
           imageSrc:
-            "https://img.freepik.com/free-vector/natural-product-realistic-banners_1284-24775.jpg?t=st=1691418016~exp=1691418616~hmac=b56b1d8500d5fa0c7b2176aee1a0156fb255e2986d49bb13f8abef17509a131e",
-          imageAlt: "Oil products",
+            "https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg",
+          imageAlt:
+            "Models sitting back to back, wearing Basic Tee in black and bone.",
         },
         {
-          name: "Cold Pressed Oils",
+          name: "Basic Tees",
           href: "#",
           imageSrc:
-            "https://img.freepik.com/free-vector/realistic-glass-jug-natural-sesame-oil-with-cork-wooden-bowl-white-seeds-green-leaves-vector-illustration_1284-69753.jpg?w=826&t=st=1691418039~exp=1691418639~hmac=c939e44c75e3eb168d56e227c7940c5766047aa65e7e3e18548e95cef1570e9b",
+            "https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg",
           imageAlt:
             "Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.",
         },
       ],
       sections: [
         {
-          id: "coldpress",
-          name: "Cold Pressed Oils",
+          id: "clothing",
+          name: "Clothing",
           items: [
-            { name: "Coconut", href: "#" },
-            { name: "Groundnut", href: "#" },
-            { name: "Sunflower", href: "#" },
-            { name: "Sesame", href: "#" },
-            { name: "Olive", href: "#" },
+            { id: "top", name: "Top", href: "#" },
+            { id: "dresses", name: "Dresses", href: "#" },
+            { id: "pants", name: "Pants", href: "#" },
+            { id: "denim", name: "Denim", href: "#" },
+            { id: "sweaters", name: "Sweaters", href: "#" },
+            { id: "tshirts", name: "T-Shirts", href: "#" },
+            { id: "jackets", name: "Jackets", href: "#" },
+            { id: "activewear", name: "Activewear", href: "#" },
+            { id: "browseall", name: "Browse All", href: "#" },
           ],
         },
         {
-          id: "grains",
-          name: "Grains",
+          id: "accessories",
+          name: "Accessories",
           items: [
-            { name: "Wheat", href: "#" },
-            { name: "Bajra", href: "#" },
-            { name: "Rice", href: "#" },
+            { id: "watches", name: "Watches", href: "#" },
+            { id: "wallets", name: "Wallets", href: "#" },
+            { id: "bags", name: "Bags", href: "#" },
+            { id: "sunglasses", name: "Sunglasses", href: "#" },
+            { id: "hats", name: "Hats", href: "#" },
+            { id: "belts", name: "Belts", href: "#" },
           ],
         },
-
         {
-          id: "jaggery",
-          name: "Jaggery",
+          id: "brands",
+          name: "Brands",
           items: [
-            { name: "Organic Jaggerys", href: "#" },
-            { name: "Organic Jaggery", href: "#" },
+            { name: "Full Nelson", href: "#" },
+            { name: "My Way", href: "#" },
+            { name: "Re-Arranged", href: "#" },
+            { name: "Counterfeit", href: "#" },
+            { name: "Significant Other", href: "#" },
           ],
         },
       ],
     },
     {
-      id: "organic",
-      name: "Organics",
+      id: "men",
+      name: "Men",
       featured: [
         {
-          name: "A2 Milk",
+          name: "New Arrivals",
           href: "#",
           imageSrc:
-            "https://th-thumbnailer.cdn-si-edu.com/DxqNnKhkIiGNJ_qtxy86XeqxcgY=/1000x750/filters:no_upscale()/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/6f/6e/6f6e0661-8a07-43f6-ba5c-94f0e5855dbe/istock_000005534054_large.jpg",
+            "https://tailwindui.com/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg",
           imageAlt:
             "Drawstring top with elastic loop closure and textured interior padding.",
         },
         {
-          name: "Exotic Fruits",
+          name: "Artwork Tees",
           href: "#",
           imageSrc:
-            "https://saladswithanastasia.com/wp-content/uploads/2022/11/avocado-prep-portrait-2022.jpg",
+            "https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-06.jpg",
           imageAlt:
             "Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt.",
         },
       ],
       sections: [
         {
-          id: "milk",
-          name: "Milk",
+          id: "clothing",
+          name: "Clothing",
           items: [
-            { name: "A2 Milk", href: "#" },
-            { name: "Low fat Milk", href: "#" },
-            { name: "Pastuerized", href: "#" },
-            { name: "Ghee", href: "#" },
+            { name: "Tops", href: "#" },
+            { name: "Pants", href: "#" },
+            { name: "Sweaters", href: "#" },
+            { name: "T-Shirts", href: "#" },
+            { name: "Jackets", href: "#" },
+            { name: "Activewear", href: "#" },
+            { name: "Browse All", href: "#" },
           ],
         },
         {
-          id: "fruits",
-          name: "Fruits",
+          id: "accessories",
+          name: "Accessories",
           items: [
-            { name: "Apple", href: "#" },
-            { name: "Dragon Fruit", href: "#" },
-            { name: "Avacado", href: "#" },
-            { name: "Banana", href: "#" },
-            { name: "Mango", href: "#" },
-            { name: "Grapes", href: "#" },
+            { name: "Watches", href: "#" },
+            { name: "Wallets", href: "#" },
+            { name: "Bags", href: "#" },
+            { name: "Sunglasses", href: "#" },
+            { name: "Hats", href: "#" },
+            { name: "Belts", href: "#" },
           ],
         },
         {
-          id: "vegetables",
-          name: "Vegetables",
+          id: "brands",
+          name: "Brands",
           items: [
-            { name: "Tomato", href: "#" },
-            { name: "Potato", href: "#" },
-            { name: "Spinach", href: "#" },
-            { name: "Sallantro", href: "#" },
+            { name: "Re-Arranged", href: "#" },
+            { name: "Counterfeit", href: "#" },
+            { name: "Full Nelson", href: "#" },
+            { name: "My Way", href: "#" },
           ],
         },
       ],

@@ -1,7 +1,7 @@
 import React from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-import { carouselData } from "./carouselData";
+import { carouselData } from "../../data/carouselData";
 
 const Carousel = () => {
   const items = carouselData.map((item) => (

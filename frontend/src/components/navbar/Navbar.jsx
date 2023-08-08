@@ -8,9 +8,9 @@ import {
   ShoppingBagIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import { navigation } from "../../data/navigation";
 import { Avatar, Button, Menu, MenuItem } from "@mui/material";
 import { deepPurple } from "@mui/material/colors";
+import { navigation } from "../../data/navigation";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -221,7 +221,7 @@ const Navbar = () => {
                   <span className="sr-only">Your Company</span>
                   <img
                     className="h-16 w-auto"
-                    src="https://img.freepik.com/free-vector/vegan-friendly-leaves-label-green-color_1017-25452.jpg?w=826&t=st=1691418710~exp=1691419310~hmac=e9e4721ac55626cd439a51fab2662de9ed66ed889c15a05058464b0411521f7e"
+                    src="https://img.freepik.com/free-vector/flat-design-clothing-store-logo-design_23-2149513757.jpg?w=826&t=st=1691471366~exp=1691471966~hmac=874874ae0a86a156aca67850b7e5ddd6ae77509817ff5637d463c2ab82d3e012"
                     alt="logo"
                   />
                 </a>

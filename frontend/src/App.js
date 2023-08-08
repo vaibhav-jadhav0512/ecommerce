@@ -3,7 +3,8 @@ import "./App.css";
 import UserRoutes from "./routes/UserRoutes";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
-import LogoClouds from "./components/logoClouds/LogoClouds";
+import TestimonialCarousal from "./components/testimonial/TestimonialCarousal";
+import MarqueeSlider from "./components/marquee/MarqueeSlider";
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
         <Route path="/*" element={<UserRoutes />}></Route>
       </Routes>
       <div>
-        <LogoClouds />
+        <MarqueeSlider />
+        <TestimonialCarousal />
         <Footer />
       </div>
     </>
