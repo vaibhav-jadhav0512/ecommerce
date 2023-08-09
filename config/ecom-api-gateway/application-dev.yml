@@ -14,6 +14,10 @@ spring:
           uri: lb://ECOM-PRODUCT-SERVICE
           predicates:
             - Path=/product/**
+        - id: ECOM-AUTHORIZATION-SERVER
+          uri: lb://ECOM-AUTHORIZATION-SERVER
+          predicates:
+            - Path=/auth/**
 eureka:
   instance:
     prefer-ip-address: true
