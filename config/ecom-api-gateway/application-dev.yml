@@ -8,6 +8,16 @@ spring:
       allowed-origins: http://localhost:3001
   cloud:
     gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+            - GET
+            - POST
+            - PUT
+            - DELETE
+            - PATCH
       routes:
         - id: ECOM-ORDER-SERVICE
           uri: lb://ECOM-ORDER-SERVICE
