@@ -3,6 +3,9 @@ server:
 spring:
   application:
     name: ECOM-API-GATEWAY
+  webflux:
+    cors:
+      allowed-origins: http://localhost:3001
   cloud:
     gateway:
       routes:
