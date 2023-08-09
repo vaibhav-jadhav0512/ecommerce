@@ -3,8 +3,21 @@ server:
 spring:
   application:
     name: ECOM-API-GATEWAY
+  webflux:
+    cors:
+      allowed-origins: "http://localhost:3001"
   cloud:
     gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:3001"
+            allowedMethods:
+            - GET
+            - POST
+            - PUT
+            - DELETE
+            - PATCH
       routes:
         - id: ECOM-ORDER-SERVICE
           uri: lb://ECOM-ORDER-SERVICE
