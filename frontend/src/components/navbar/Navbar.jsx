@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { Fragment, useState } from "react";
 import { Dialog, Popover, Tab, Transition } from "@headlessui/react";
@@ -11,14 +11,50 @@ import {
 import { Avatar, Button, Menu, MenuItem } from "@mui/material";
 import { deepPurple } from "@mui/material/colors";
 import { navigation } from "../../data/navigation";
-
+import { useDispatch, useSelector } from "react-redux";
+import { useLocation, useNavigate } from "react-router-dom";
+import { logout } from "../../redux/auth/action";
+import AuthModal from "../auth/AuthModal";
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [openAuthModal, setOpenAuthModal] = useState(false);
+  const { auth, cart } = useSelector((store) => store);
+  const openUserMenu = Boolean(anchorEl);
+  const location = useLocation();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const handleCategoryClick = (category, section, item) => {
+    navigate(`/${category.id}/${section.id}/${item.id}`);
+  };
+  const handleUserClick = (e) => {
+    setAnchorEl(e.currentTarget);
+  };
+  const handleCloseUserMenu = (e) => {
+    setAnchorEl(null);
+  };
+  const handleOpen = () => {
+    setOpenAuthModal(true);
+  };
+  const handleClose = () => {
+    setOpenAuthModal(false);
+  };
+  useEffect(() => {
+    if (auth.user) {
+      handleClose();
+    }
+    if (location.pathname === "/login" || location.pathname === "/register") {
+      navigate(-1);
+    }
+  }, [auth.user]);
+  const handleLogout = () => {
+    handleCloseUserMenu();
+    dispatch(logout());
+  };
   return (
     <div className="bg-white">
       {/* Mobile menu */}
@@ -46,7 +82,7 @@ const Navbar = () => {
               leaveFrom="translate-x-0"
               leaveTo="-translate-x-full"
             >
-              <Dialog.Panel className="relative flex w-full max-w-xs flex-col overflow-y-auto bg-white pb-12 shadow-xl">
+              <Dialog.Panel className="relative flex w-full max-w-xs flex-col overflow-y-scroll bg-white pb-12 shadow-xl">
                 <div className="flex px-4 pb-2 pt-5">
                   <button
                     type="button"
@@ -349,7 +385,7 @@ const Navbar = () => {
               </Popover.Group>
 
               <div className="ml-auto flex items-center">
-                {/* <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
+                <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                   {auth.user?.firstName ? (
                     <div>
                       <Avatar
@@ -390,7 +426,7 @@ const Navbar = () => {
                       Signin
                     </Button>
                   )}
-                </div> */}
+                </div>
 
                 <div className="hidden lg:ml-8 lg:flex">
                   <a
@@ -436,6 +472,7 @@ const Navbar = () => {
           </div>
         </nav>
       </header>
+      <AuthModal handleClose={handleClose} open={openAuthModal} />
     </div>
   );
 };

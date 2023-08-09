@@ -8,7 +8,7 @@ const HomeSectionCarousel = ({ data, sectionName }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const responsive = {
-    0: { items: 1.5 },
+    0: { items: 2 },
     720: { items: 3 },
     1024: { items: 6.5 },
   };
