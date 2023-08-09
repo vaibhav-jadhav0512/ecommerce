@@ -5,13 +5,13 @@ spring:
     name: ECOM-API-GATEWAY
   webflux:
     cors:
-      allowed-origins: http://localhost:3001
+      allowed-origins: "http://localhost:3001"
   cloud:
     gateway:
       globalcors:
         corsConfigurations:
           '[/**]':
-            allowedOrigins: http://localhost:3001
+            allowedOrigins: "http://localhost:3001"
             allowedMethods:
             - GET
             - POST
