@@ -10,10 +10,14 @@ spring:
           uri: lb://ECOM-ORDER-SERVICE
           predicates:
             - Path=/orders/**
+          filters:
+            - AuthFilter
         - id: ECOM-PRODUCT-SERVICE
           uri: lb://ECOM-PRODUCT-SERVICE
           predicates:
             - Path=/product/**
+          filters:
+            - AuthFilter
         - id: ECOM-AUTHORIZATION-SERVER
           uri: lb://ECOM-AUTHORIZATION-SERVER
           predicates:
