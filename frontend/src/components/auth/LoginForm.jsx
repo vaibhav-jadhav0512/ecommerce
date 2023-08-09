@@ -18,7 +18,7 @@ const LoginForm = () => {
     const data = new FormData(event.currentTarget);
 
     const userData = {
-      email: data.get("email"),
+      username: data.get("email"),
       password: data.get("password"),
     };
     console.log("login user", userData);

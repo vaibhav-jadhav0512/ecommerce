@@ -10,4 +10,6 @@ public interface UserService {
 
 	public String generateToken(String username);
 
+	public UserCredentials validateUser(String jwt);
+
 }

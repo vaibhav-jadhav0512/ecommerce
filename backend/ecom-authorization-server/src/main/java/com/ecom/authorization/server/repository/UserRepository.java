@@ -10,4 +10,6 @@ public interface UserRepository {
 
 	public Optional<UserCredentials> findByName(String username);
 
+	public UserCredentials findByEmail(String email);
+
 }

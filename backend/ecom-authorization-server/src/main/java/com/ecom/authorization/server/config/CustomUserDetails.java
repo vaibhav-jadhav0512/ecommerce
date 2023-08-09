@@ -17,7 +17,7 @@ public class CustomUserDetails implements UserDetails {
 	private String password;
 
 	public CustomUserDetails(UserCredentials userCredential) {
-		this.username = userCredential.getName();
+		this.username = userCredential.getEmail();
 		this.password = userCredential.getPassword();
 	}
 

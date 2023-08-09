@@ -14,30 +14,11 @@
 }
 
 html {
-  font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
-@media (min-width: 1440px) {
-  html {
-    zoom: 1.5;
-  }
-}
-
-@media (min-width: 2560px) {
-  html {
-    zoom: 1.7;
-  }
-}
-
-@media (min-width: 3860px) {
-  html {
-    zoom: 2.5;
-  }
-}
-
 ::-webkit-scrollbar {
-  width: 1.3rem;
+  width: 0.2rem;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -60,9 +41,11 @@ body {
 }
 
 .container {
-  max-width: 124rem;
   padding: 4rem 1rem;
   margin: 0 auto;
+}
+.container-testimonial {
+  min-width: -webkit-fill-available;
 }
 
 .heading {

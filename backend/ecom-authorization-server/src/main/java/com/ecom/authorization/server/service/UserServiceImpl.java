@@ -35,4 +35,10 @@ public class UserServiceImpl implements UserService {
 		jwtService.validateToken(token);
 	}
 
+	@Override
+	public UserCredentials validateUser(String jwt) {
+		String email = jwtService.getEmailFromJwtToken(jwt);
+		return userRepository.findByEmail(email);
+	}
+
 }

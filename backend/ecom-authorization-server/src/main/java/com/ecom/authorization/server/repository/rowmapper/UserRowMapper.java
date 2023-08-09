@@ -15,7 +15,10 @@ public class UserRowMapper implements RowMapper<UserCredentials> {
 	public UserCredentials mapRow(ResultSet rs, int rowNum) throws SQLException {
 		UserCredentials user = new UserCredentials();
 		user.setUserId(rs.getInt("userId"));
-		user.setName(rs.getString("name"));
+		user.setFirstName(rs.getString("first_name"));
+		user.setLastName(rs.getString("last_name"));
+		user.setMobile(rs.getString("mobile"));
+		user.setRole(rs.getString("role"));
 		user.setEmail(rs.getString("email"));
 		user.setPassword(rs.getString("password"));
 		return user;

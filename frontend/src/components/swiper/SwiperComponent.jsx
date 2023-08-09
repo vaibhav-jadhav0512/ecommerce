@@ -13,7 +13,7 @@ import Slider from "../slider/Slider";
 
 function SwiperComponent() {
   return (
-    <div className="container relative p-5">
+    <div className="container container-testimonial relative p-5">
       <div className="font-Poppins bg-white text-gray-700">
         <div className="text-center">
           <h1 className="text-4xl w-96 mx-auto leading-normal font-bold mb-12">
