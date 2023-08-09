@@ -1,6 +1,6 @@
 spring:
   application:
-    name: ecom-order-service
+    name: ecom-authorization-server
   cloud:
     config:
       uri: http://localhost:8765

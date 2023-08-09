@@ -9,5 +9,4 @@ public class EcomAuthorizationServerApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(EcomAuthorizationServerApplication.class, args);
 	}
-
 }

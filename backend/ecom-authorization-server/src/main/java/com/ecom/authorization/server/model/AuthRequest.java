@@ -5,12 +5,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class UserCredentials {
+@NoArgsConstructor
+public class AuthRequest {
 
-	private int userId;
-	private String name;
-	private String email;
+	private String username;
 	private String password;
+
 }
