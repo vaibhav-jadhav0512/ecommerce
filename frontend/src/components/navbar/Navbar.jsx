@@ -13,7 +13,7 @@ import { deepPurple } from "@mui/material/colors";
 import { navigation } from "../../data/navigation";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
-import { logout } from "../../redux/auth/action";
+import { getUser, logout } from "../../redux/auth/action";
 import AuthModal from "../auth/AuthModal";
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -43,16 +43,21 @@ const Navbar = () => {
   const handleClose = () => {
     setOpenAuthModal(false);
   };
+  const jwt = localStorage.getItem("jwt");
   useEffect(() => {
-    if (auth.user) {
+    if (jwt) {
+      dispatch(getUser(jwt));
+      console.log("Useeffevt");
       handleClose();
     }
+
     if (location.pathname === "/login" || location.pathname === "/register") {
       navigate(-1);
     }
-  }, [auth.user]);
+  }, []);
   const handleLogout = () => {
     handleCloseUserMenu();
+    handleClose();
     dispatch(logout());
   };
   return (
@@ -386,7 +391,7 @@ const Navbar = () => {
 
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                  {auth.user?.firstName ? (
+                  {auth.user ? (
                     <div>
                       <Avatar
                         className="text-white"
@@ -472,7 +477,7 @@ const Navbar = () => {
           </div>
         </nav>
       </header>
-      <AuthModal handleClose={handleClose} open={openAuthModal} />
+      <AuthModal handleClose={handleClose} open={openAuthModal} auth={auth} />
     </div>
   );
 };

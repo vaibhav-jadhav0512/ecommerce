@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ecom.authorization.server.exception.JwtTokenExpiredException;
 import com.ecom.authorization.server.model.AuthRequest;
 import com.ecom.authorization.server.model.UserCredentials;
 import com.ecom.authorization.server.service.UserService;
@@ -50,7 +51,8 @@ public class AuthController {
 	}
 
 	@GetMapping("/user")
-	public ResponseEntity<UserCredentials> validateUser(@RequestHeader("Authorization") String jwt) {
+	public ResponseEntity<UserCredentials> validateUser(@RequestHeader("Authorization") String jwt)
+			throws JwtTokenExpiredException {
 		return new ResponseEntity<>(service.validateUser(jwt), HttpStatus.OK);
 	}
 }

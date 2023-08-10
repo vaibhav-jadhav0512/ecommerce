@@ -16,9 +16,12 @@ const style = {
   p: 4,
 };
 
-const AuthModal = ({ open, handleClose }) => {
+const AuthModal = ({ open, handleClose, auth }) => {
   const navigate = useNavigate();
   const location = useLocation();
+  if (auth.user) {
+    open = false;
+  }
   return (
     <div>
       <Modal
